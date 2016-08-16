@@ -1,0 +1,13 @@
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.BLL.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.BLL.pdb
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.DAL.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.Models.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.DAL.pdb
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\JobApp.Models.pdb
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\obj\Debug\JobApp.BLL.csprojResolveAssemblyReference.cache
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\obj\Debug\JobApp.BLL.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\obj\Debug\JobApp.BLL.pdb
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\EntityFramework.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\EntityFramework.xml
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.BLL\bin\Debug\EntityFramework.SqlServer.xml

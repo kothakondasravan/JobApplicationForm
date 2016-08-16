@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="phone" Type="nvarchar" MaxLength="100" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="address1" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="address2" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="linkedin" Type="nvarchar" MaxLength="200" />
+    <Property Name="website" Type="nvarchar" MaxLength="200" />
+    <Property Name="hear" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GenderID" Type="int" Nullable="false" />
+    <Property Name="RaceID" Type="int" Nullable="false" />
+    <Property Name="VeteranID" Type="int" Nullable="false" />
+    <Property Name="DisabilityID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disability">
+    <Key>
+      <PropertyRef Name="DisabilityID" />
+    </Key>
+    <Property Name="DisabilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisabilityDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenderDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Race">
+    <Key>
+      <PropertyRef Name="RaceID" />
+    </Key>
+    <Property Name="RaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RaceDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="veteran">
+    <Key>
+      <PropertyRef Name="VeteranID" />
+    </Key>
+    <Property Name="VeteranID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VeteranDesc" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Applicati__Count__398D8EEE">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicati__Disab__3D5E1FD2">
+    <End Role="disability" Type="Self.disability" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="disability">
+        <PropertyRef Name="DisabilityID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="DisabilityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicati__Gende__3A81B327">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicati__RaceI__3B75D760">
+    <End Role="Race" Type="Self.Race" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Race">
+        <PropertyRef Name="RaceID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="RaceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicati__State__38996AB5">
+    <End Role="State" Type="Self.State" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applicati__Veter__3C69FB99">
+    <End Role="veteran" Type="Self.veteran" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="veteran">
+        <PropertyRef Name="VeteranID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="VeteranID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationModelStoreContainer">
+    <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="disability" EntityType="Self.disability" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Race" EntityType="Self.Race" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="veteran" EntityType="Self.veteran" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Applicati__Count__398D8EEE" Association="Self.FK__Applicati__Count__398D8EEE">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicati__Disab__3D5E1FD2" Association="Self.FK__Applicati__Disab__3D5E1FD2">
+      <End Role="disability" EntitySet="disability" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicati__Gende__3A81B327" Association="Self.FK__Applicati__Gende__3A81B327">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicati__RaceI__3B75D760" Association="Self.FK__Applicati__RaceI__3B75D760">
+      <End Role="Race" EntitySet="Race" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicati__State__38996AB5" Association="Self.FK__Applicati__State__38996AB5">
+      <End Role="State" EntitySet="State" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applicati__Veter__3C69FB99" Association="Self.FK__Applicati__Veter__3C69FB99">
+      <End Role="veteran" EntitySet="veteran" />
+      <End Role="Application" EntitySet="Application" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

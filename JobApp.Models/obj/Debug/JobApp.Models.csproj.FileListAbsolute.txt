@@ -1,0 +1,5 @@
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.Models\bin\Debug\JobApp.Models.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.Models\bin\Debug\JobApp.Models.pdb
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.Models\obj\Debug\JobApp.Models.csprojResolveAssemblyReference.cache
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.Models\obj\Debug\JobApp.Models.dll
+C:\Users\kotha\Desktop\VS\JobApplication\JobApp.Models\obj\Debug\JobApp.Models.pdb
