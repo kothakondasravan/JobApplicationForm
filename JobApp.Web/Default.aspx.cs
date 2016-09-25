@@ -65,15 +65,23 @@ namespace JobApp.Web
             app.address1 = address1.Text;
             app.address2 = address2.Text;
             app.city = city.Text;
-            app.StateID = Convert.ToInt32(State.SelectedValue);
-            app.CountryID = Convert.ToInt32(DropDown.SelectedValue);
             app.linkedin = LinkedIn.Text;
             app.website = website.Text;
             app.hear = referral.Text;
-            app.GenderID =Convert.ToInt32(gender.SelectedValue);
-            app.RaceID = Convert.ToInt32(race.SelectedValue);
-            app.VeteranID = Convert.ToInt32(Veteran.SelectedValue);
-            app.DisabilityID = Convert.ToInt32(disability.SelectedValue);
+            try
+            {
+
+                app.StateID = Convert.ToInt32(State.SelectedValue);
+                app.CountryID = Convert.ToInt32(DropDown.SelectedValue);
+                app.GenderID = Convert.ToInt32(gender.SelectedValue);
+                app.RaceID = Convert.ToInt32(race.SelectedValue);
+                app.VeteranID = Convert.ToInt32(Veteran.SelectedValue);
+                app.DisabilityID = Convert.ToInt32(disability.SelectedValue);
+            }
+            catch
+            {
+
+            }
 
         
             List<string> invalid = ap1.Create(app);

@@ -104,18 +104,6 @@ namespace JobApp.BLL
             {
                 errors.Add("Please check the length of the reference name");
             }
-            else if(avm.GenderID < 1)
-            {
-                errors.Add("Please select a Gender");
-            }
-            else if (avm.VeteranID == 0)
-            {
-                errors.Add("Please select veteran status");
-            }
-            else if (avm.DisabilityID == 0)
-            {
-                errors.Add("Please choose one of the Disability status");
-            }
             return errors;
         }
         

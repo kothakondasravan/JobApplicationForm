@@ -132,13 +132,14 @@
                     <td>Disability Status:
                     </td>
                     <td class="col-lg-7">
-                        <asp:RadioButtonList ID="disability" runat="server" >
+                        <asp:RadioButtonList ID="disability" runat="server">
                         </asp:RadioButtonList>
+                        
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Button ID="btn_submit" runat="server" Text="Submit Application" OnClick="btn_submit_Click" class="btn btn-success" />
+                        <asp:Button ID="btn_submit" runat="server" Text="Submit Application" OnClick="btn_submit_Click" class="btn btn-success" OnClientClick="validate();"/>
                     </td>
                 </tr>
             </table>
